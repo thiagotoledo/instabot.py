@@ -131,6 +131,7 @@ class InstaBot:
                  unfollow_break_min=15,
                  unfollow_break_max=30,
                  log_mod=0,
+                 log_file_path='',
                  proxy="",
                  user_blacklist={},
                  tag_blacklist=[],
@@ -178,6 +179,8 @@ class InstaBot:
         self.max_like_for_one_tag = max_like_for_one_tag
         # log_mod 0 to console, 1 to file
         self.log_mod = log_mod
+        # log_file_path ex: logs/ 
+        self.log_file_path = log_file_path
         self.s = requests.Session()
         # if you need proxy make something like this:
         # self.s.proxies = {"https" : "http://proxyip:proxyport"}
